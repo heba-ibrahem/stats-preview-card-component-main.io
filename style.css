@@ -1,6 +1,6 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 
 /* colors */
@@ -15,83 +15,108 @@
     --mainParagraph: hsla(0, 0%, 100%, 0.75);
     --statHeadings: hsla(0, 0%, 100%, 0.6);
 }
+
 /* screens */
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1440px) {
     #card {
-        width: 80%;   
-    }
-    #txt{
-        padding-right: 5%;
-        width: 60%;
-    }
-    #head{
-        padding: 15% 15% 0 15% ;
-    }
-    #number{
+        width: 1110px;
         flex-direction: row;
-    justify-content: space-between;
     }
-    #image,img{
+
+    #txt {
+        width: 50%;
+        padding: 80px 70px;
+    }
+
+    #headTitle,
+    #headTitle span {
+        font-size: 40px;
+    }
+
+    #headTxt {
+        margin-top: 30px;
+        padding-right: 106px;
+        font-size: 16px;
+    }
+
+    #number {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        padding: 75px 110px 0 0;
+
+    }
+
+    #image,
+    img {
         border-radius: 0 10px 10px 0;
     }
 }
-@media only screen and (max-width: 375px){
+
+@media only screen and (max-width: 375px) {
     #card {
-        width: 90%;
+        width: 330px;
         justify-content: center;
-        flex-wrap:wrap-reverse;
+        flex-direction: column-reverse;
     }
+
     #txt {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        padding-top: 10%;
+        width: 260px;
+        padding: 40px 35px;
         text-align: center;
-        padding-right: 0%;
     }
-    #head {
-        padding: 0% 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    #headTitle,
+    #headTitle span {
+        font-size: 28px;
     }
-    h1 {
-        font-size: 30px;
+
+    #headTxt {
+        margin-top: 30px;
+        padding-right: 1px;
+        font-size: 15px;
     }
-    p {
-        padding: 0%;
-    }
+
     #number {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 50px 1px 0 0;
+
     }
-    #image,img{
+    #number p{
+        margin-bottom: 30px;
+    }
+    #number p:last-child{
+        margin-bottom: 0px;
+    }
+
+    #image,
+    img {
         border-radius: 10px 10px 0 0;
     }
 
 }
+
 * {
     margin: 0;
+    font-size: 15px;
 }
+
 /* container */
-#container {
+main {
     background-color: var(--mainBackground);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 /* card */
 #card {
     background-color: var(--cardBackground);
-    height: 100%;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 7%;
     display: flex;
-    flex-direction: row;
     border-radius: 10px;
 }
 
@@ -106,60 +131,66 @@
 #head {
     display: flex;
     flex-direction: column;
+    font-family: 'Inter';
 }
 
-h1 span {
+#headTitle {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--mainHeading);
+}
+
+#headTitle span {
     color: var(--accent);
 }
 
-h1 {
-    margin-bottom: 25px;
-    font-family: 'Inter' ;
-    color: var(--mainHeading);  
-    font-size: 35px; 
-}
-p {
-    font-family: 'Inter';
+#headTxt {
     color: var(--mainParagraph);
-    font-size: 15px;
-    line-height: 25px;
+    line-height: 1.5;
+
 }
+
 #number {
     display: flex;
-    padding:  15%  15% 10% 15% ;
     color: var(--mainParagraph);
     text-transform: uppercase;
-    
+
 }
-#number p{
-    font-family: 'Lexend Deca';
-    letter-spacing: 1px;
-    font-size: 12px;
-}
+
 #number h2 {
     color: var(--mainHeading);
     font-family: 'Inter';
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#number p {
+    font-family: 'Lexend Deca';
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: var(--statHeadings);
 }
 
 /* img */
 #image {
     background-color: var(--accent);
     overflow: hidden;
-    
+
 }
+
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.6;
 }
+
 .attribution {
     font-size: 11px;
     text-align: center;
     color: white;
-  }
+}
 
-  .attribution a {
+.attribution a {
     color: hsl(228, 45%, 44%);
-  }
+}
